@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shop.dresscollection.DressEntryController">
+    <children>
+        <Label layoutX="290.0" layoutY="20.0" text="Dress Collection" textFill="#7671bd">
+            <font>
+                <Font name="System Bold Italic" size="32.0" />
+            </font>
+        </Label>
+        <Button layoutX="730.0" layoutY="25.0" mnemonicParsing="false" onAction="#showListAction" text="Show List" />
+
+        <Label layoutX="40.0" layoutY="100.0" text="Dress Name: (Jack &amp; Jane Hoodie)" textFill="#5b5b5b" />
+        <TextField fx:id="nameField" layoutX="40.0" layoutY="120.0" prefWidth="300.0" promptText="TextField" />
+        <Label fx:id="nameError" layoutX="40.0" layoutY="150.0" text="Dress name is required." textFill="RED" visible="false" />
+
+        <Label layoutX="40.0" layoutY="180.0" text="Dress Type: (Hoodie/Sweater)" textFill="#5b5b5b" />
+        <ChoiceBox fx:id="typeBox" layoutX="40.0" layoutY="200.0" prefWidth="300.0" />
+        <Label fx:id="typeError" layoutX="40.0" layoutY="230.0" text="Dress type is required." textFill="RED" visible="false" />
+
+        <Label layoutX="40.0" layoutY="260.0" text="Available Size: (Medium/Large)" textFill="#5b5b5b" />
+        <ComboBox fx:id="sizeBox" layoutX="40.0" layoutY="280.0" prefWidth="300.0" />
+        <Label fx:id="sizeError" layoutX="40.0" layoutY="310.0" text="Available size is required." textFill="RED" visible="false" />
+
+        <Label layoutX="40.0" layoutY="340.0" text="Dress Color: (White/Black)" textFill="#5b5b5b" />
+        <ColorPicker fx:id="colorPicker" layoutX="40.0" layoutY="360.0" prefWidth="300.0" />
+        <Label fx:id="colorError" layoutX="40.0" layoutY="390.0" text="Dress Color is required." textFill="RED" visible="false" />
+
+        <Label layoutX="40.0" layoutY="420.0" text="Price: (500 - 5000)" textFill="#5b5b5b" />
+        <Slider fx:id="priceSlider" layoutX="40.0" layoutY="440.0" prefWidth="300.0" />
+        <Label layoutX="40.0" layoutY="460.0" text="Price can't be less than 500." textFill="RED" visible="false" />
+
+        <Label layoutX="40.0" layoutY="490.0" text="Dress Details:" textFill="#5b5b5b" />
+        <TextArea fx:id="detailsArea" layoutX="40.0" layoutY="510.0" prefHeight="60.0" prefWidth="300.0" promptText="TextArea" />
+        <Label layoutX="40.0" layoutY="575.0" text="Only 50 characters is allowed." textFill="RED" visible="false" />
+
+        <Label layoutX="450.0" layoutY="100.0" text="Last Purchase Date: (2023-12-20)" textFill="#5b5b5b" />
+        <DatePicker fx:id="datePicker" layoutX="450.0" layoutY="120.0" prefWidth="300.0" promptText="DatePicker" />
+        <Label fx:id="dateError" layoutX="450.0" layoutY="150.0" text="Date can't be future date." textFill="RED" visible="false" />
+
+        <Label layoutX="450.0" layoutY="180.0" text="Available Quantity: (0 - 500)" textFill="#5b5b5b" />
+        <Spinner fx:id="qtySpinner" layoutX="450.0" layoutY="200.0" prefWidth="300.0" />
+        <Label layoutX="450.0" layoutY="230.0" text="Quantity can't be less than zero." textFill="RED" visible="false" />
+
+        <Label layoutX="450.0" layoutY="260.0" text="Discount Code: (SECRET20)" textFill="#5b5b5b" />
+        <PasswordField fx:id="discountField" layoutX="450.0" layoutY="280.0" prefWidth="300.0" promptText="PasswordField" />
+        <Label layoutX="450.0" layoutY="310.0" text="Same code already exists." textFill="RED" visible="false" />
+
+        <Label layoutX="450.0" layoutY="340.0" text="Targated Customer: (Male/Female)" textFill="#5b5b5b" />
+        <RadioButton fx:id="maleRadio" layoutX="450.0" layoutY="365.0" mnemonicParsing="false" text="Male" />
+        <RadioButton fx:id="femaleRadio" layoutX="530.0" layoutY="365.0" mnemonicParsing="false" text="Female" />
+        <Label fx:id="targetError" layoutX="450.0" layoutY="390.0" text="Targeted customer is required." textFill="RED" visible="false" />
+
+        <CheckBox fx:id="boostingCheck" layoutX="450.0" layoutY="425.0" mnemonicParsing="false" text="Enable Facebook Boosting" textFill="#5b5b5b" />
+
+        <Button layoutX="350.0" layoutY="590.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #add8e6; -fx-border-color: #a9a9a9;" text="Save" />
+    </children>
+</AnchorPane>
